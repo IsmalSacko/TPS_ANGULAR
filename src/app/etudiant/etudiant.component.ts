@@ -12,10 +12,12 @@ import { FormsModule } from '@angular/forms';
 export class EtudiantComponent {
   @Input()  nomEtu = "Paul"
   @Input() prenomEtu = "Martin"
-  @Input() statut = "absent"
+  @Input() statut = 'present'
   @Input() commentaire = "JE suis absent"
- present = "present"
+  present = "present"
   absent = "absent"
+  derniereModif = ''
+  nbStatut = 0
 
 
  
@@ -28,13 +30,18 @@ export class EtudiantComponent {
   }
 
   presentStatut() {
-    return this.present 
+    this.statut = "present"
+    this.derniereModif = new Date().toString()
+    this.nbStatut++
   }
   
   asbsentStatut() {
-    return this.absent 
+    this.statut = "absent"
+    this.derniereModif = new Date().toString()
+    this.nbStatut++
   }
   
+
 }
 
 

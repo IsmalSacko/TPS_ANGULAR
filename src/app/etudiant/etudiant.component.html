@@ -1,6 +1,10 @@
 <li class="card card-small">
     <h6>Ceci est un etudiant: Nom: {{ retNomEtu() }} Prénom: {{retPrenomEtu()}} 
-        Statut: {{statut}}   <span *ngIf="statut === 'absent'"class="statut-indicateur"></span>  Commentaire: {{commentaire}}
+        Statut: {{statut}} fois  {{nbStatut}}  <span *ngIf="statut === 'absent'"class="statut-indicateur"></span> 
+         Commentaire: {{commentaire}}
+         Date: {{derniereModif | date: 'dd/MM/yyyy'}} 
+         <button class="btn btn-success mx-1" (click)="presentStatut()">Présent</button>
+        <button class="btn btn-danger" (click)="asbsentStatut()">Absent</button>
     </h6>
 
 
