@@ -1,0 +1,9 @@
+.statut-indicateur {
+    display: inline-block;
+    width: 10px; /* Taille du carré */
+    height: 10px;
+    background-color: red; /* Couleur du carré */
+    margin-right: 8px; /* Espacement entre le carré et le texte */
+    border-radius: 2px; /* Facultatif : pour des bords légèrement arrondis */
+  }
+  
